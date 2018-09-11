@@ -35,12 +35,12 @@ int get_move(){
 	printf("\n Your move: ");
 	
 	int move;
-	scanf_s("%d", &move);
+	scanf("%d", &move);
 
 	while(move > 9 || move < 1 || board[move - 1] != '-'){
 		printf(" \n Please enter a legal move (1-9): ");
 	
-		scanf_s("%d", &move);
+		scanf("%d", &move);
 		
 	}
 	return move;

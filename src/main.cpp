@@ -1,4 +1,5 @@
 #include "project.h"
+#include "stdio.h"
 
 int main(){ 
 	printf("Welcome to K&N! \n");
@@ -28,12 +29,12 @@ int main(){
 		
 		printf(" \n Would you like to play again& (y/n): ");
 		
-		scanf_s("%c", &reply);
+		scanf("%c", &reply);
 		
 		while(reply != 'y' && reply != 'n'){
 			printf("Please enter a valid reply (y/n): ");
 			
-			scanf_s("%c", &reply);
+			scanf("%c", &reply);
 			
 		}        
 	}
