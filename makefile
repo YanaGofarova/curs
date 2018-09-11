@@ -12,9 +12,9 @@ build/project.o: src/project.c
 	mkdir -p build
 	gсс -Wall -c src/project.c -o build/project.o
 
-bin/test: build/main.o build/project.o build/test.o build/project_test.o
+bin/test: build/project.o build/test.o build/project_test.o
 	mkdir -p bin
-	gсс -I src -I lib -Wall build/main.o build/project.o build/test.o build/project_test.o -o bin/test
+	gсс -I src -I lib -Wall build/project.o build/test.o build/project_test.o -o bin/test
 
 build/test.o: test/main.c
 	mkdir -p build
