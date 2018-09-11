@@ -4,25 +4,25 @@ bin/program: build/main.o build/project.o
 	mkdir -p  bin
 	g++ -Wall build/main.o build/project.o -o bin/program
 
-build/main.o: src/main.c
+build/main.o: src/main.cpp
 	mkdir -p build
-	g++ -Wall -c src/main.c -o build/main.o
+	g++ -Wall -c src/main.cpp -o build/main.o
 
-build/project.o: src/project.c
+build/project.o: src/project.cpp
 	mkdir -p build
-	g++ -Wall -c src/project.c -o build/project.o
+	g++ -Wall -c src/project.cpp -o build/project.o
 
 bin/test: build/main.o build/project.o build/test.o build/project_test.o
 	mkdir -p bin
 	g++ -I src -I lib -Wall build/main.o build/project.o build/test.o build/project_test.o -o bin/test
 
-build/test.o: test/test.c
+build/test.o: test/main.cpp
 	mkdir -p build
-	g++ -I src -I lib -Wall -c test/test.c -o build/test.o  
+	g++ -I src -I lib -Wall -c test/main.cpp -o build/test.o  
 
-build/project_test.o: test/project_test.c
+build/project_test.o: test/project_test.cpp
 	mkdir -p build
-	g++ -I src -I lib -Wall -c test/project_test.c -o build/project_test.o 
+	g++ -I src -I lib -Wall -c test/project_test.cpp -o build/project_test.o 
 
 test: bin/test
 	./bin/test
