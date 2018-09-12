@@ -5,9 +5,8 @@
 
 
 CTEST(wonQ,Xcount)
-{   
-    
-	const int result = wonQ('X');
+{    
+	const int result = wonQ('X',1);
 	const int expected = 1;
 	ASSERT_EQUAL(expected, result);
 }
@@ -15,7 +14,7 @@ CTEST(wonQ,Xcount)
 CTEST(wonQ,2count)
 {     
     
-	const int result = wonQ('2');
+	const int result = wonQ('2',1);
 	const int expected = 0;
 	ASSERT_EQUAL(expected, result);
 }
@@ -23,7 +22,7 @@ CTEST(wonQ,2count)
 CTEST(wonQ,xcount)
 {     
     
-	const int result = wonQ('x');
+	const int result = wonQ('x',1);
 	const int expected = 0;
 	ASSERT_EQUAL(expected, result);
 }
@@ -31,7 +30,7 @@ CTEST(wonQ,xcount)
 CTEST(wonQ,5count)
 {     
     
-	const int result = wonQ('5');
+	const int result = wonQ('5',1);
 	const int expected = 0;
 	ASSERT_EQUAL(expected, result);
 }
@@ -39,7 +38,7 @@ CTEST(wonQ,5count)
 CTEST(wonQ,1count)
 {      
     
-	const int result = wonQ('1');
+	const int result = wonQ('1',1);
 	const int expected = 0;
 	ASSERT_EQUAL(expected, result);
 }
@@ -47,15 +46,15 @@ CTEST(wonQ,1count)
 CTEST(wonQ,0count)
 {     
     
-	const int result = wonQ('0');
+	const int result = wonQ('0',1);
 	const int expected = 0;
 	ASSERT_EQUAL(expected, result);
 }
 
-CTEST(wonQ,Wcount)
+CTEST(wonQ,ocount)
 {    
 
-	const int result = wonQ('W');
+	const int result = wonQ('o',1);
 	const int expected = 0;
 	ASSERT_EQUAL(expected, result);
 }

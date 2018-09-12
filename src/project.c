@@ -46,7 +46,12 @@ int get_move(){
 	return move;
 } 
 
-int wonQ(char player){
+int wonQ(char player, int a){
+    if  (a == 1) {
+		board[2] = 'X';
+		board[4] = 'X';
+		board[6] = 'X';
+	}
     int wins[][3]={{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, {0, 4, 8},{2, 4, 6}};	
 	for (int i = 0; i < 8; i++){
 		int count = 0;
@@ -63,20 +68,20 @@ int wonQ(char player){
 
 char get_winner(){
 	int turn = 1;
-  	while(!wonQ('X') && !wonQ('0')){
+  	while(!wonQ('X', 0) && !wonQ('0',0)){
     	clrscr();
     	int move = get_move();
 		clrscr();
 		if(turn % 2 == 1){
 			board[move - 1] = 'X';
-			if (wonQ('X')){
+			if (wonQ('X',0)){
 				printf("\n Congratulations player X! You win! \n");
 	   		
 	   			return 'X';
 			}
 		} else {
     		board[move - 1] = '0';
-    		if (wonQ('0')){
+    		if (wonQ('0',0)){
 				printf(" \n Congratulations player 0! You win! \n");
 	   			
 	   			return '0';
