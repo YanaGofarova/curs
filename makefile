@@ -18,7 +18,7 @@ bin/test: build/project.o build/test.o build/project_test.o
 
 build/test.o: test/main.c
 	mkdir -p build
-	g++-I src -I lib -Wall -c test/main.c -o build/test.o  
+	g++ -I src -I lib -Wall -c test/main.c -o build/test.o  
 
 build/project_test.o: test/project_test.c
 	mkdir -p build
