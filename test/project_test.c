@@ -35,7 +35,7 @@ CTEST(wonQ,5count)
 	ASSERT_EQUAL(expected, result);
 }
 
-CTEST(wonQ,1count)
+CTEST(wonQ,Ocount)
 {      
     
 	const int result = wonQ('1',1);

@@ -1,7 +1,7 @@
 #ifndef PROJECT_H
 #define PROJECT_H
-#define _CRT_SECURE_NO_WARNINGS
-//void clrscr();
+
+void clrscr();
 void clrbrd();
 void print_board();
 int get_move();
